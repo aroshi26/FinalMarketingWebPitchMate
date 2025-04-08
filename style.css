@@ -1,0 +1,805 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body{
+    background: #080808; 
+    color: #fff;
+    margin: 0; 
+    padding-top: 70px;
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-size:cover ;
+    background-position: center;
+    display: flex;
+    align-items: left;
+    text-align: left;
+    position: relative;
+
+
+}
+
+#header .header-container{
+    width: 100%;
+    max-width: 1000px;
+}
+.header-container{
+    padding: 5px 10%;
+}
+#navbar {
+    display: flex;
+    padding-top: 1px;
+    padding-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 5%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: top 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+
+/* Hide Navbar on Scroll Down */
+.nav-hidden {
+    top: -100px; /* Moves navbar out of view */
+}
+
+/* Show Navbar on Scroll Up */
+.nav-visible {
+    top: 0; /* Brings navbar back into view */
+}
+
+#navbar:hover {
+    background: rgba(0, 0, 0, 0.9); /* Darker background on hover */
+}
+
+.logo{
+    width: 200px;
+    height: 100px;
+    
+
+
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    padding-bottom: 10px;
+
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ffae00; /* Change text color on hover */
+}
+ 
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease-in-out;
+}
+
+
+
+
+
+/* Change color for the active tab */
+nav ul li a.active {
+    color: #ffae00;
+}
+
+
+
+/* Change color on hover without underline */
+nav ul li a:hover {
+    color: #ffae00;
+}
+
+.video-container {
+    position: absolute;
+   
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+   
+}
+
+/* Video styles 
+.video-container video {
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: fill;
+}
+*/
+#menu-toggle{
+    display: none;
+}
+
+.menu-toggle{
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #fff;
+    display: none;
+}
+
+.header-text{
+    padding-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 25px;
+    text-align:left;
+    width: 50%;
+    max-width: 800px;
+    position: absolute;
+    top: 15%; /* Moves the text higher on the page */
+    left: 5%; /* Moves the text closer to the left */
+    
+}
+
+.header-text h1{
+    font-size: 48px;
+    font-weight: 700;
+    color: #ffae00;
+    line-height: 1.2;
+    
+    
+    
+}
+
+.header-buttons {
+    display:inline-flex;
+    align-items: center; /* Align vertically */
+    justify-content: flex-start;
+    margin-top: 370px;
+    gap: 10px;
+   
+    
+}
+
+/* Call-to-Action Button */
+.cta-button {
+    background: #e8ba58;
+    margin-left: 0%;
+    margin-top: 10%;
+    color: #060606;
+    padding: 12px 20px;
+    font-size: 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cta-button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.cta-button:hover {
+    background: #ffa600;
+    transform: scale(1.1);
+}
+
+/* Play Store Image */
+.header-playstore {
+    width: 280px; /* Adjust the size as needed */
+    height: auto;
+    margin: top 1px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.header-playstore:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 80%; /* adjust this value to move it higher/lower */
+        right: 10px;
+        transform: translateY(-50%);
+      }
+    #navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 2%;
+        position: fixed; 
+        width: 100%;
+    }
+
+    .logo{
+        padding-left: 5px;
+    }
+
+    
+    #navbar ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.8);
+        flex-direction: column;
+        display: none;
+        padding: 10px 0;
+    }
+    #navbar ul.active {
+        display: flex;
+    }
+    
+    #navbar ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+   
+
+    .header-text {
+        width: 90%;
+        margin-top: 100px;
+    }
+
+    .header-text h1{
+        font-size: 36px;
+        text-align: center;
+        line-height: 65px;
+    }
+
+    /*.cta-button{
+        font-size: 18px;
+        padding: 10px 20px;
+        margin-left: 110px;
+    
+    }*/
+
+    .header-buttons {
+        flex-direction: column; /* Stack button & image */
+        gap: 10px;
+        margin-top: 600px;
+        margin-left: 95px;
+      
+
+    }
+
+    .header-playstore {
+        width: 160px;
+    }
+}
+
+
+
+/* About Section */
+#about {
+    padding: 80px 5%;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+/* Left Column - Logo */
+.about-col-1 {
+    flex-basis: 40%;
+    display: flex;
+    justify-content: left;
+    
+}
+
+.about-col-1 img {
+    width: 400px; /* Adjust size */
+    max-width: 100%;
+}
+
+/* Right Column - Content */
+.about-col-2 {
+    flex-basis: 60%;
+    text-align: right; /* Align text to the right */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Ensures everything stays to the right */
+    
+}
+
+/* Title */
+.sub-title {
+    font-size: 50px;
+    font-weight: 700;
+    color: #fff;
+    text-align: right;
+}
+
+/* Paragraph */
+.about-col-2 p {
+    font-size: 18px;
+    color: #ababab;
+    text-align: right;
+    max-width: 600px;
+    line-height: 1.5;
+}
+
+/* Social Links */
+.tab-titles {
+    display: flex;
+    justify-content: flex-end; /* Aligns links to the right */
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.tab-links {
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    text-align: right;
+    color: #fff;
+    padding-bottom: 5px;
+}
+
+/* Underline effect */
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ffae00;
+    position: absolute;
+    right: 0; /* Align underline to the right */
+    bottom: 0;
+    transition: width 0.4s ease-in-out;
+}
+
+/* Hover Effect */
+.tab-links:hover::after {
+    width: 100%;
+}
+
+/* Keep the underline fixed for the active tab */
+.tab-links.active-link::after {
+    width: 100%; /* Make underline full width */
+}
+
+/* Change text color of the active tab */
+.tab-links.active-link {
+    color: #ffae00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-col-1 {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .about-col-2 {
+        text-align: center;
+        align-items: center;
+    }
+
+    .about-col-2 p{
+        text-align: center;
+        line-height: 40px;
+    }
+
+
+
+    .tab-titles {
+        justify-content: center;
+    }
+
+    .tab-links::after {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+    }
+}
+
+.card-title h1{
+    text-align: right;
+    font-size: 50px;
+    font-weight: 700;
+    color: #fff;
+    padding-right: 5%;
+    
+}
+
+#intro {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    
+}
+
+.intro-img-col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.intro-img-col img {
+    
+    max-width: 50%;
+    height: auto;
+}
+.intro-text {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+   
+}
+
+.intro-text h1{
+    color: #ababab;
+
+}
+.highlight {
+    color: #F4A100;
+}
+
+@media (max-width: 768px){
+    .card-title h1{
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro-text {
+        font-size: 1.5rem;
+    }
+    .intro-img-col img {
+        max-width: 90%;
+    }
+}
+
+
+
+/* services */
+
+/* Project Section */
+#services {
+    padding: 80px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+/* Left Title */
+.sub-title {
+    font-size: 50px;
+    font-weight: 700;
+    color: #fff;
+    text-align: left; /* Align title to the left */
+    flex-basis: 30%;
+}
+
+/* Right Grid Cards */
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    flex-basis: 65%;
+    justify-content: flex-end; /* Move grid to the right */
+}
+
+/* Card Styling */
+.services-list div {
+    background: #262626;
+    padding: 40px;
+    font-size: 14px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out, transform 0.3s ease-in-out;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Card Icons */
+.services-list div i {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #ffae00;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Hover Effect for Icons */
+.services-list div:hover i {
+    color: white;
+    transform: scale(1.2);
+}
+
+/* Card Headings */
+.services-list div h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Learn More Link */
+.services-list div a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    margin-top: 15px;
+    display: inline-block;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Underline Effect */
+.services-list div a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #050505;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Hover Effect for Learn More Link */
+.services-list div a:hover {
+    color: #090909;
+}
+
+.services-list div a:hover::after {
+    width: 100%;
+}
+
+/* Hover Effect for Entire Card */
+.services-list div:hover {
+    background: #ffae00;
+    color: black;
+    transform: translateY(-5px);
+}
+
+/* Ensure Heading Stays Black on Hover */
+.services-list div:hover h2 {
+    color: black;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    #services {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sub-title {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .services-list {
+        flex-basis: 100%;
+        justify-content: center;
+    }
+}
+
+.FAQ {
+    width: 80%;
+    margin: 50px auto;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    
+
+}
+.faq {
+    background: #222;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.answer {
+    display: none;
+    padding-top: 10px;
+    text-align: left;
+    font-size: 15px;
+    color: #F4A100;
+}
+.faq.active .answer {
+    display: block;
+}
+svg {
+    transition: transform 0.3s ease;
+}
+.faq.active svg {
+    transform: rotate(180deg);
+}
+
+@media (max-width: 768px){
+    .question{
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro-text {
+        font-size: 1.5rem;
+    }
+    .intro-img-col img {
+        max-width: 70%;
+    }
+}
+
+
+footer{
+    background-color: #111;
+}
+.footerContainer{
+    width: 100%;
+    padding: 70px 30px 20px ;
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding:  10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0,9;
+}
+/* Hover affect on social media icon */
+.socialIcons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+}
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+.footerNav{
+    margin: 30px 0;
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.footerNav ul li a{
+    color:white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+
+}
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+.footerBottom{
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+.footerBottom p{
+    color: white;
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+@media (max-width: 700px){
+    .footerNav ul{
+        flex-direction: column;
+    } 
+    .footerNav ul li{
+        width:100%;
+        text-align: center;
+        margin: 10px;
+    }
+    .socialIcons a{
+        padding: 8px;
+        margin: 4px;
+    }
+}
+
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header-text,
+.header-buttons,
+.about-col-1, .about-col-2,
+.intro-container,
+.services, .card-title,
+.swiper-container, .contact-container,
+.FAQ{
+     /* Initially hidden */
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+
+:target {
+    animation: slideUp 1s ease-out forwards;
+    opacity: 1;
+    transform: translateY(0);
+}

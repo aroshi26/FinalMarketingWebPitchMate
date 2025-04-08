@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PitchMate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" crossorigin="">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+    <link rel="stylesheet" href="stylesswapper.css">
+    <link rel="stylesheet" href="Contact Us/contactstyle.css">
+    <link rel="stylesheet" href="projectindex.html">
+    <script src="https://kit.fontawesome.com/5899d8c570.js" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+           emailjs.init({
+              publicKey: "ugjMiYZRxYnd3SfMD",
+           });
+        })();
+    </script>
+
+    
+</head>
+<body>
+    <div id="header">
+        <div class="header-container">
+            <nav id="navbar">
+                <img src="images/pitchmate logonew.png" class="logo">
+
+                <button class="menu-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                  </button>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#intro">Project</a></li>
+                    <li><a href="#team">Our Team</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="video-container">
+                <video autoplay loop muted playsinline>
+                    <source src="images/Blue Modern Gym Fitness Website Landing Page Desktop Prototype.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="header-text">
+                <h1>The Ultimate Cricket Management Solution 
+                  - Smarter, Faster, Better</h1>
+            </div>
+            <div class="header-buttons">
+                <button class="cta-button"><a href="#about">View Us</a></button>
+                <img class="header-playstore" src="images/play store new.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Select the menu toggle button and the nav menu
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('#navbar ul');
+    
+        // Toggle the "active" class on the menu and switch icons on click
+        menuToggle.addEventListener('click', () => {
+          navMenu.classList.toggle('active');
+          const icon = menuToggle.querySelector('i');
+          icon.classList.toggle('fa-bars');
+          icon.classList.toggle('fa-times');
+        });
+      </script>
+  
+
+
+
+    <div id="about">
+      <div class="about-col-1">
+          <img src="images/PitchmatePNG.png" alt="PitchMate Logo">
+      </div>
+      <div class="about-col-2">
+          <h1 class="sub-title">About Us</h1>
+          <p>PitchMate is an innovative cricket management platform designed to streamline 
+              training, performance tracking, and team coordination. Whether you're a coach, 
+              player, or medical staff, PitchMate empowers you with data-driven insights 
+              to optimize every aspect of the game.
+          </p>
+          
+      </div>
+    </div>
+
+
+    <div id="intro" class="intro-container">
+
+      <div class="intro-text">
+         <h1><span class="highlight">WHAT MAKES</span> US DIFFERENT?</h1>
+     </div>
+      <div class="intro-img-col">
+          <img src="images/features.png" alt="Introduction Image" class="intro-image">
+      </div>
+      
+  </div>
+
+  <div id="services" class="services">
+   <h1 class="sub-title">The Overview of Project</h1>
+   <div class="services-list">
+       <div>
+           <i class="fa-solid fa-list-check"></i>
+           <h2>Vision</h2>
+           <p>Revolutionizing cricket club management with data-driven transparency and efficiency.</p>
+           <a href="projectindex.html">Learn more</a>
+       </div>
+
+       <div>
+           <i class="fa-solid fa-hand-holding-hand"></i>
+           <h2>Mission</h2>
+           <p>Empowering cricket clubs with a smart, centralized system to track performance, improve coaching, and streamline operations.</p>
+           <a href="projectindex.html">Learn more</a>
+       </div>
+
+       <div>
+           <i class="fa-solid fa-file-signature"></i>
+           <h2>Introduction to PitchMate</h2>
+           <p>A cutting-edge platform designed to enhance player development, automate management, and promote fair team selection through technology.</p>
+           <a href="projectindex.html">Learn more</a>
+       </div>
+   </div>
+</div>
+
+<div id="team" class="card-title">
+   <h1>Our Team</h1>
+</div>
+ 
+   <section class="swiper-container">
+      
+        <div class="card__container swiper">
+           <div class="card__content">
+              <div class="swiper-wrapper">
+                 <article class="card__article swiper-slide">
+                    <div class="card__image">
+                       <img src="images/Mahith1.png" alt="image" class="card__img">
+                       <div class="card__shadow"></div>
+                    </div>
+     
+                    <div class="card__data">
+                       <h3 class="card__name">Mahith<br/>Gunasekera</h3>
+                       <h4 class="team-role">Backend Developer</h4>
+                       <p class="card__description">
+                         ensuring seamless communication between the web, 
+                        mobile app, and database. 
+                       </p>
+     
+                       
+                    </div>
+                 </article>
+     
+                 <article class="card__article swiper-slide">
+                    <div class="card__image">
+                       <img src="images/ruwanyanew.png" alt="image" class="card__img">
+                       <div class="card__shadow"></div>
+                    </div>
+     
+                    <div class="card__data">
+                       <h3 class="card__name">Ruwanya<br/>Nanayakkara</h3>
+                       <h4 class="team-role">Frontend Developer</h4>
+                       <p class="card__description">
+                        designing interactive and responsive 
+                        interfaces that make navigating PitchMate effortlessly. 
+                       </p>
+     
+                    
+                    </div>
+                 </article>
+     
+                 <article class="card__article swiper-slide">
+                    <div class="card__image">
+                       <img src="images/aroshinew.png" alt="image" class="card__img">
+                       <div class="card__shadow"></div>
+                    </div>
+     
+                    <div class="card__data">
+                       <h3 class="card__name">Aroshi<br/>Dilshara</h3>
+                       <h4 class="team-role">Database Developer</h4>
+                       <p class="card__description">
+                        Expert data management ensures accurate insights and reliable information for better decision-making.
+                       </p>
+     
+                      
+                    </div>
+                 </article>
+     
+                 <article class="card__article swiper-slide">
+                    <div class="card__image">
+                       <img src="images/vinethpng1.png" alt="image" class="card__img">
+                       <div class="card__shadow"></div>
+                    </div>
+     
+                    <div class="card__data">
+                       <h3 class="card__name">Vineth<br/>Arandarage</h3>
+                       <h4 class="team-role">Frontend Developer</h4>
+                       <p class="card__description">
+                       Expertise in frontend technologies brings PitchMate’s 
+                         vision to life with interactive and efficient web components.
+                       </p>
+     
+                      
+                    </div>
+                 </article>
+
+                 <article class="card__article swiper-slide">
+                    <div class="card__image">
+                       <img src="images/chanukapng.png" alt="image" class="card__img">
+                       <div class="card__shadow"></div>
+                    </div>
+     
+                    <div class="card__data">
+                       <h3 class="card__name">Chanuka<br/>Herath</h3>
+                       <h4 class="team-role">Mobile App Developer</h4>
+                       <p class="card__description">
+                        Expertise in mobile development guarantees that 
+                        PitchMate delivers the same effectiveness on mobile as it does on the web.
+                       </p>
+     
+                     
+                    </div>
+                 </article>
+
+                 
+                 <article class="card__article swiper-slide">
+                  <div class="card__image">
+                     <img src="images/sandilpng.png" alt="image" class="card__img">
+                     <div class="card__shadow"></div>
+                  </div>
+   
+                  <div class="card__data">
+                     <h3 class="card__name">Sandil<br/>Peris</h3>
+                     <h4 class="team-role">Mobile App Developer</h4>
+                     <p class="card__description">
+                        Develops a fast and responsive mobile app,making PitchMate accessible anytime, anywhere.
+                     </p>
+   
+                    
+                  </div>
+               </article>
+              </div>
+           </div>
+
+           <div class="swiper-button-next">
+              <i class="ri-arrow-right-s-line"></i>
+           </div>
+           
+           <div class="swiper-button-prev">
+              <i class="ri-arrow-left-s-line"></i>
+           </div>
+
+           <div class="swiper-pagination"></div>
+        </div>
+     </section>
+
+     <div id="contact" class="contact-container">
+		<main class="row">
+			
+			<!--  *******   Left Section (Column) Starts   *******  -->
+
+			<section class="col left">
+				
+				<!--  *******   Title Starts   *******  -->
+
+				<div class="contactTitle">
+					<h2>Get In Touch</h2>
+					<p>Send Your Thoughts</p>
+				</div>
+
+				<!--  *******   Title Ends   *******  -->
+
+				<!--  *******   Contact Info Starts   *******  -->
+
+				<div class="contactInfo">
+					
+					<div class="iconGroup">
+						<div class="icon">
+							<i class="fa-solid fa-phone"></i>
+						</div>
+						<div class="details">
+							<span>Phone</span>
+							<span>+94 76 332 0820</span>
+						</div>
+					</div>
+
+					<div class="iconGroup">
+						<div class="icon">
+							<i class="fa-solid fa-envelope"></i>
+						</div>
+						<div class="details">
+							<span>Email</span>
+							<span>pitchmate.official2025@gmail.com</span>
+						</div>
+					</div>
+
+					<div class="iconGroup">
+						<div class="icon">
+							<i class="fa-solid fa-location-dot"></i>
+						</div>
+						<div class="details">
+							<span>Location</span>
+							<span>Colombo,Sri Lanka</span>
+						</div>
+					</div>
+
+				</div>
+
+				<!--  *******   Contact Info Ends   *******  -->
+
+				<!--  *******   Social Media Starts   *******  -->
+
+				<div class="socialMedia">
+					<a href="https://www.facebook.com/profile.php?id=61572467080285"><i class="fa-brands fa-facebook-f"></i></a>
+					<a href="https://www.instagram.com/pitchmate_official_?igsh=czh5am8wbWN2azJ3&utm_source=qr"><i class="fa-brands fa-instagram"></i></a>
+					<a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin-in"></i></a>
+				</div>
+
+				<!--  *******   Social Media Ends   *******  -->
+
+			</section>
+
+			<!--  *******   Left Section (Column) Ends   *******  -->
+
+			<!--  *******   Right Section (Column) Starts   *******  -->
+
+			<section class="col right">
+				
+				<!--  *******   Form Starts   *******  -->
+
+				<form  class="messageForm" onsubmit="sendMail(event)">
+					
+					<div  class="inputGroup halfWidth">
+						<input type="text" id="name" name="name" required="required">
+						<label for="name">Your Name</label>
+					</div>
+
+					<div class="inputGroup halfWidth">
+						<input type="email" id="email" name="email" required="required">
+						<label for="email">Email</label>
+					</div>
+
+					<div class="inputGroup fullWidth">
+						<input type="text" id="subject" name="subject" required="required">
+						<label for="subject">Subject</label>
+					</div>
+
+					<div class="inputGroup fullWidth">
+						<textarea id="message" name="message" rows="4" required="required"></textarea>
+						<label for="message">Say Something</label>
+					</div>
+
+					<div class="inputGroup fullWidth">
+						<button type="submit">Send Message</button>
+					</div>
+
+				</form>
+
+				<!--  *******   Form Ends   *******  -->
+			</section>
+
+			<!--  *******   Right Section (Column) Ends   *******  -->
+
+		</main>
+	</div>
+
+    <script src="Contact Us/contactusscript.js"></script>
+    
+     
+     <script src="swiper-bundle.min.js"></script>
+
+     <script src="main.js"></script>
+
+     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          const tabLinks = document.querySelectorAll(".tab-links");
+  
+          tabLinks.forEach(tab => {
+              tab.addEventListener("click", function () {
+                  // Remove active class from all tabs
+                  tabLinks.forEach(link => link.classList.remove("active-link"));
+  
+                  // Add active class to the clicked tab
+                  this.classList.add("active-link");
+              });
+          });
+      });
+  </script>
+
+<section id="faq" class="FAQ">
+   <h2 class="title">FAQs</h2>
+   <div class="faq">
+       <div class="question">
+           <h3>What is PitchMate?</h3>
+           <svg width="15" height="10" viewBox="0 0 42 25">
+               <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+           </svg> 
+       </div>
+       <div class="answer">
+           <p>
+               PitchMate is a cricket club management system designed to enhance player performance tracking, coaching efficiency, and club operations. It integrates web and mobile applications for structured feedback, team selection, and data-driven decision-making.  
+           </p>
+       </div>
+   </div>
+
+   <div class="faq">
+      <div class="question">
+          <h3>Who can use PitchMate?</h3>
+          <svg width="15" height="10" viewBox="0 0 42 25">
+              <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+          </svg> 
+      </div>
+      <div class="answer">
+          <p>
+            PitchMate is designed for cricket club administrators, coaches, supporting staff (physios, doctors), and players. Administrators manage operations, coaches provide structured feedback, and players access performance insights through a mobile app.
+          </p>
+      </div>
+  </div>
+
+  <div class="faq">
+   <div class="question">
+       <h3>Why is PitchMate necessary for cricket clubs?</h3>
+       <svg width="15" height="10" viewBox="0 0 42 25">
+           <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+       </svg> 
+   </div>
+   <div class="answer">
+       <p>
+         Many clubs rely on outdated, manual record-keeping, leading to inefficiencies in tracking player performance, coaching effectiveness, and team selection. PitchMate digitizes and automates these processes, ensuring transparency and accuracy.
+       </p>
+   </div>
+</div>
+
+<div class="faq">
+   <div class="question">
+       <h3>What are the key features of PitchMate?</h3>
+       <svg width="15" height="10" viewBox="0 0 42 25">
+           <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+       </svg> 
+   </div>
+   <div class="answer">
+       <p>
+         PitchMate streamlines cricket club management with player performance tracking, structured coaching feedback, and automated rankings for batting, bowling, and all-rounders. It enhances team selection using AI recommendations, integrates medical records for player health tracking, and provides performance dashboards for insights. Secure authentication and role-based access ensure data protection and controlled access.
+       </p>
+   </div>
+</div>
+
+<div class="faq">
+   <div class="question">
+       <h3>Is PitchMate accessible on mobile devices?</h3>
+       <svg width="15" height="10" viewBox="0 0 42 25">
+           <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+       </svg> 
+   </div>
+   <div class="answer">
+       <p>
+         Yes, PitchMate provides a mobile application for players and a responsive web interface for administrators and coaches.
+       </p>
+   </div>
+</div>
+</section>
+
+<script>
+   document.querySelectorAll('.faq .question').forEach(question => {
+       question.addEventListener('click', () => {
+           const faq = question.parentElement;
+           faq.classList.toggle('active');
+       });
+   });
+</script>
+
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+       let lastScrollTop = 0;
+       const navbar = document.getElementById("navbar");
+
+       window.addEventListener("scroll", function () {
+           let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+           if (scrollTop > lastScrollTop) {
+               // Scrolling down -> Hide navbar
+               navbar.classList.add("nav-hidden");
+               navbar.classList.remove("nav-visible");
+           } else {
+               // Scrolling up -> Show navbar
+               navbar.classList.add("nav-visible");
+               navbar.classList.remove("nav-hidden");
+           }
+           lastScrollTop = scrollTop;
+       });
+   });
+</script>
+
+
+<!----<script>
+   document.addEventListener("DOMContentLoaded", function () {
+       const navLinks = document.querySelectorAll("nav ul li a");
+
+       navLinks.forEach(link => {
+           link.addEventListener("click", function () {
+               // Remove active class from all links
+               navLinks.forEach(link => link.classList.remove("active"));
+
+               // Add active class to clicked link
+               this.classList.add("active");
+           });
+       });
+   });
+</script> ----->
+
+
+<footer>
+   <div class="footerContainer">
+       <div class="socialIcons">
+           <a href="https://www.facebook.com/profile.php?id=61572467080285"><i class="fa-brands fa-facebook"></i></a>
+           <a href="https://www.instagram.com/pitchmate_official_?igsh=czh5am8wbWN2azJ3&utm_source=qr"><i class="fa-brands fa-instagram"></i></a>
+           <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin"></i></a>
+           <a href=""><i class="fa-brands fa-youtube"></i></a>
+       </div>
+       <div class="footerNav">
+           <ul>
+               <li><a href="#header">Home</a></li>
+               <li><a href="#about">About Us</a></li>
+               <li><a href="#intro">Project</a></li>
+               <li><a href="#team">Our Team</a></li>
+               <li><a href="#faq">FAQ</a></li>
+               <li><a href="#contact">Contact</a></li>
+           </ul>
+       </div>
+       
+   </div>
+   <div class="footerBottom">
+       <p>Copyright &copy;2025; Designed by <span class="designer">CS54-PitchMate</span></p>
+   </div>
+</footer>
+  
+</body>
+</html>

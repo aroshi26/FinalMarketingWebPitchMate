@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5899d8c570.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="projectStyle.css">
+    <link rel="stylesheet" href="index.html">
+    <title>PitchMate</title>
+</head>
+<body>
+    <div id="header">
+        <div class="header-container">
+            <nav id="navbar">
+                <img src="images/pitchmate logonew.png" class="logo">
+
+                <button class="menu-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html #about">About Us</a></li>
+                    <li><a href="#intro">Project</a></li>
+                    <li><a href="#team">Our Team</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>  
+    
+    <script>
+        // Select the menu toggle button and the nav menu
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('#navbar ul');
+    
+        // Toggle the "active" class on the menu and switch icons on click
+        menuToggle.addEventListener('click', () => {
+          navMenu.classList.toggle('active');
+          const icon = menuToggle.querySelector('i');
+          icon.classList.toggle('fa-bars');
+          icon.classList.toggle('fa-times');
+        });
+      </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let lastScrollTop = 0;
+        const navbar = document.getElementById("navbar");
+ 
+        window.addEventListener("scroll", function () {
+            let scrollTop = window.scrollY || document.documentElement.scrollTop;
+ 
+            if (scrollTop > lastScrollTop) {
+                // Scrolling down -> Hide navbar
+                navbar.classList.add("nav-hidden");
+                navbar.classList.remove("nav-visible");
+            } else {
+                // Scrolling up -> Show navbar
+                navbar.classList.add("nav-visible");
+                navbar.classList.remove("nav-hidden");
+            }
+            lastScrollTop = scrollTop;
+        });
+    });
+ </script>
+
+
+<section class="first-container">
+    <div class="text-project">
+        <h1 class="main-title1">
+            PitchMate Mobile & Web Application
+        </h1>
+
+        <p class="main-description1">
+            PitchMate is dedicated to simplifying cricket management by 
+            offering a centralized digital solution that bridges the gap 
+            between players, coaches, and administrators. Our mission is 
+            to provide efficient scheduling, performance tracking, 
+            medical monitoring, and seamless communication, ensuring that teams 
+            operate at peak efficiency both on and off the field.
+        </p>
+
+        <button class="project-contact-btn">
+            <span class="project-contact-icon">📩</span> Contact Us
+        </button>
+    </div>
+
+    <div class="project-img">
+        <img src="images/playground.jpg" alt="">
+    </div>
+
+</section>
+
+<section class="web-container">
+    <div class="web-img">
+        <img src="images/Frame 1 (1).png" alt="">
+    </div>
+
+    <div class="web-title">
+        <h1>PitchMate Web Application</h1>
+
+        <p>The PitchMate Web Application streamlines cricket management for admins, 
+           coaches, and medical staff. It offers a dashboard for team insights, player management 
+           for tracking stats and fitness, and match & session management for scheduling. 
+           Performance analytics provides data-driven insights, while medical reports monitor 
+           injuries and recovery. A communication hub ensures seamless messaging, and resource management 
+           tracks equipment. Secure role-based access controls user permissions. PitchMate enhances efficiency, 
+           performance tracking, and communication in cricket management
+        </p>
+
+        <button class="download-button1"><i class="fa-solid fa-download"></i>Download Now</button>
+    </div>
+
+   
+</section>
+
+
+<section class="mobile-container">
+    
+    <div class="mobile-title">
+        <h1>PitchMate Mobile App</h1>
+
+        <p>The PitchMate Mobile Application is designed for players to stay informed and
+           engaged with their team. The Personal Dashboard provides access to match schedules,
+           stats, and training progress. With Performance Tracking, players can view detailed 
+           insights into both personal and team performance. The app ensures players never miss 
+           a session with Training Session notifications and tracks attendance. 
+           The Medical Updates section keeps players informed about injury recovery and medical 
+           reports. Coach Feedback & Tips helps players improve with direct insights from coaches. 
+           Match Notifications provide instant updates on upcoming games, venues, and timings, 
+           while the Team Communication feature allows players to connect seamlessly with coaches and teammates. 
+           PitchMate keeps players organized, informed, and performance-driven. 
+        </p>
+
+        <button class="download-button2"><i class="fa-solid fa-download"></i>Download Now</button>
+    </div>
+
+    <div class="mobile-img">
+        <img src="images/Frame 2.png" alt="">
+    </div>
+</section>
+
+<section class="wrapper">
+    <div class="tabs">
+        <button class="tab active">Dashboard</button>
+        <button class="tab">Performance Stats</button>
+        <button class="tab">Matches</button>
+        <button class="tab">Team Compositions</button>
+        <button class="tab">Medical records</button>
+
+        <div class="line">
+
+        </div>
+    </div>
+
+    <div class="tab-content">
+        <div class="content active">
+            <h2>Dashboard</h2>
+            <p>The Dashboard provides an overview of team performance and key statistics,
+               ensuring users can quickly assess the team's standing. It also displays recent matches 
+               and upcoming fixtures, keeping everyone updated on schedules. Additionally, real-time 
+               notifications and alerts inform users about important events, such as match updates, 
+               training sessions, or medical reports. The dashboard serves as a centralized hub, offering 
+               quick access to key metrics, helping coaches, players, and admins make informed decisions efficiently.
+            </p>
+        </div>
+
+        <div class="content">
+            <h2>Performance Stats</h2>
+            <p>The Stats & Analytics tab provides detailed insights into both team and individual performances. Users can access 
+                comprehensive player and team statistics, including batting and bowling analytics, to assess performance at various 
+                levels. Session-based performance tracking enables users to evaluate improvement over time, while win/loss trends 
+                and insights offer a strategic overview of past matches. This section also features data visualization tools, such 
+                as graphs and charts, making it easier to interpret performance metrics and adjust strategies accordingly.
+            </p>
+        </div>
+
+        <div class="content">
+            <h2>Matches</h2>
+            <p>The Matches & Sessions section allows users to manage all aspects of match and training schedules. It includes comprehensive 
+                match schedules for different formats such as T20, ODI, and Test, enabling easy planning and tracking. Users can also add new
+                 matches and update existing ones with relevant details. Training sessions are seamlessly scheduled within this tab, with options 
+                 for player attendance tracking to monitor participation. Additionally, this section includes performance analysis for each session, 
+                 helping coaches assess players' progress and areas that need improvement.
+            </p>
+        </div>
+
+        <div class="content">
+            <h2>Team Compositions</h2>
+            <p>The Players & Teams section is dedicated to player management and team structuring. Each player profile contains key statistics, 
+                past performances, and relevant details. Coaches and admins can manage teams by adding or removing players as needed. To ensure 
+                player well-being, this tab also tracks injury and fitness reports, allowing medical staff to update health conditions regularly. 
+                The system maintains a player availability status, ensuring that coaches are aware of who is fit for selection. Additionally, 
+                the player performance history records detailed analytics on every athlete, helping with data-driven decisions for squad selection 
+                and strategy formulation.
+            </p>
+        </div>
+
+        <div class="content">
+            <h2>Medical records</h2>
+            <p>The Medical & Reports section ensures that player health and fitness are monitored efficiently. It maintains injury reports and medical 
+                history to keep track of recovery timelines and prevent recurring issues. Fitness assessments help in evaluating players’ physical conditions, 
+                contributing to injury prevention and performance optimization. The system also includes health status tracking, ensuring that medical staff 
+                and coaches are informed about each player's well-being. Users can generate detailed medical reports, providing valuable insights for trainers
+                 and physiotherapists. Additionally, coaches and medical staff can input observations and recommendations, ensuring a collaborative approach to 
+                 player care and management.
+            </p>
+        </div>
+    </div>
+
+   
+</section>
+
+<button class="back-to-btn"><a href="index.html">Back To Home</a></button>
+
+
+<footer>
+    <div class="footerContainer">
+        <div class="socialIcons">
+            <a href="https://www.facebook.com/profile.php?id=61572467080285"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/pitchmate_official_?igsh=czh5am8wbWN2azJ3&utm_source=qr"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="footerNav">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#intro">Project</a></li>
+                <li><a href="#team">Our Team</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        
+    </div>
+    <div class="footerBottom">
+        <p>Copyright &copy;2025; Designed by <span class="designer">CS54-PitchMate</span></p>
+    </div>
+ </footer>
+   
+
+<script src="projectscript.js"></script>
+ 
+</body>
+</html>
